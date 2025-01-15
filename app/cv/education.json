@@ -1,0 +1,30 @@
+{
+    "education": [
+      {
+        "year_range": "2006-2007",
+        "institution": "Western Michigan University",
+        "area_of_focus": "Computer Science"
+      },
+      {
+        "year_range": "2007-2010",
+        "institution": "Michigan State University",
+        "area_of_focus": "Telecommunications"
+      },
+      {
+        "year_range": "2010-2011",
+        "institution": "Oakland Community College",
+        "area_of_focus": "Screenwriting"
+      },
+      {
+        "year_range": "2019",
+        "institution": "Operation Spark, US",
+        "program": "IBC Fundamentals Javascript"
+      },
+      {
+        "year_range": "2019",
+        "institution": "Operation Spark, US",
+        "program": "Functional and Web/Dev Level 3 in Advanced Software Engineering Immersive Program"
+      }
+    ]
+  }
+  

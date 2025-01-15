@@ -1,0 +1,68 @@
+@import url('./palette.css');
+@import url('./typography.css');
+@import url('./animations.css');
+@import url('./buttons.css');
+@import url('./icons.css');
+@import url('./forms.css');
+
+html, body{
+    margin: 0;
+    background-color: var(--white);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;  
+}
+
+.container{
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    flex-direction: column;
+    height: 100vh;
+}
+
+.page-container{
+    padding: 25px;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px 0 0 0;
+    width: 200px;
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 30px 0 0 0;
+    width: 200px;
+}
+
+hr {
+    border: 0; 
+    border-top: 1px solid var(--black);
+    margin: 0px;
+    padding-bottom: 10px;
+}
+
+.skill-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (min-width: 1279px)  {
+   .page-container{
+        width: 768px !important;
+        margin: auto;
+   }
+}
+
+
+
+

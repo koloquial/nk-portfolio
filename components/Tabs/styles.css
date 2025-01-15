@@ -1,0 +1,70 @@
+.tabs{
+  display: grid;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  border-bottom: 1px solid var(--active);
+}
+
+.tab{
+  border: 1px solid var(--active);
+  border-bottom: 0;
+  background-color: transparent;
+  color: var(--black);
+  margin: 0;
+  margin-bottom: -10px;
+  padding: 5px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px 5px 0px 0px;
+  user-select: none;
+  transition: background-color .5s ease;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  
+  &:hover{
+      background-color: var(--hover);
+  }
+
+  &:disabled{
+      border: 0;
+      background-color: var(--dim);
+      cursor: not-allowed;
+  }
+}
+
+.tab-active{
+  border: 1px solid var(--active);
+  border-bottom: 0;
+  background-color: var(--active);
+  color: var(--black);
+  margin: 0;
+  margin-bottom: -10px;
+  padding: 5px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px 5px 0px 0px;
+  user-select: none;
+  transition: background-color .5s ease;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  
+  &:hover{
+      background-color: var(--hover);
+  }
+
+  &:disabled{
+      border: 0;
+      background-color: var(--dim);
+      cursor: not-allowed;
+  }
+}
+
+.tab-content{
+  padding: 10px;
+  background-color: var(--active);
+}
+
+.project-history{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

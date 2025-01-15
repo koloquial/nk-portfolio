@@ -1,0 +1,25 @@
+.thumbnail{
+    width: 100%;
+}
+
+.icon{
+    font-size: xx-large;
+    color: var(--active);
+    transition: color .5s ease;
+    cursor: pointer;
+
+    &:hover{
+        color: var(--hover);
+    }
+}
+
+.icon-small{
+    font-size: small;
+    color: var(--black);
+    margin: 0;
+}
+
+.chatgpt{
+    height: 10px;
+    width: 10px;
+}
