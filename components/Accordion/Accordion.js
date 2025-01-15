@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 
 const Accordion = ({ sections }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const [windowWidth, setWindowWidth] = useState(window ? window.innerWidth : '');
+  const [windowHeight, setWindowHeight] = useState(window ? window.innerHeight: '');
 
   useEffect(() => {
     const handleResize = () => {
@@ -12,11 +12,14 @@ const Accordion = ({ sections }) => {
       setWindowHeight(window.innerHeight);
     };
 
-    window.addEventListener('resize', handleResize);
+    try{
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }catch(e){
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    }
   }, []);
 
   const handleToggle = (index) => {
