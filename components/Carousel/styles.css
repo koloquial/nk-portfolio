@@ -10,8 +10,13 @@
 }
 
 .carousel-heading{
-    display: grid;
-    grid-template-columns: 1fr;
+    display: block;
+}
+
+.footer{
+    display: block;
+    padding: 0px 0 10px 0;
+    margin-top: -5px;
 }
 
 .carousel img {
@@ -55,6 +60,13 @@
 
 @media (min-width: 768px) {
     .carousel-heading{
+        display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .footer{
+        display: flex;
+        justify-content: flex-end; 
+        gap: 10px;
     }
  }

@@ -4,24 +4,6 @@ import { useState, useEffect } from 'react';
 
 const Carousel = ({ heading, footer, images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(window ? window.innerWidth : '');
-  const [windowHeight, setWindowHeight] = useState(window ? window.innerHeight: '');
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-      setWindowHeight(window.innerHeight);
-    };
-
-    try{
-      window.addEventListener('resize', handleResize);
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }catch(e){
-
-    }
-  }, []);
 
   const handleToggle = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -40,10 +22,11 @@ const Carousel = ({ heading, footer, images }) => {
   return (
     <div className='carousel-container'>
       <div className='carousel-heading'>
-      {heading && heading}
+        {heading && heading}
 
-      {windowWidth >= 1024 && footer}
-      
+        <div className='footer'>
+          {footer && footer}
+        </div>
       </div>
       
       <div className='carousel'>
@@ -58,8 +41,6 @@ const Carousel = ({ heading, footer, images }) => {
         <button className='carousel-button left' onClick={prevSlide}>&#10094;</button>
         <button className='carousel-button right' onClick={nextSlide}>&#10095;</button>
       </div>
-
-      {windowWidth < 1024 && footer}
     </div>
   );
 };
